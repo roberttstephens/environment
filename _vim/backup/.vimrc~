@@ -1,0 +1,50 @@
+"plugins: nerdtree, snipmate, xmledit, surround, taglist
+"below are added by me
+set number "displays number lines
+set autoindent
+
+"the below three set tabstops
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set backspace=2
+
+set backupdir=~/.vim/backup
+
+"the below four are for snipmates. It loads php and html snippets for php files
+au BufRead *.php set ft=php.html
+au BufNewFile *.php set ft=php.html
+
+" For zend and drupal
+au BufRead *.phtml set ft=php.html
+au BufNewFile *.phtml set ft=php.html
+
+" For drupal
+au BufRead *.module set ft=php.html
+au BufNewFile *.module set ft=php.html
+
+au BufRead *.install set ft=php.html
+au BufNewFile *.install set ft=php.html
+" End for drupal
+
+"autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+:filetype plugin on
+:filetype indent on
+
+"automatically opens NERDTree when vim is opened. Then switches to the file
+"that is opened.
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+
+"makes all .swp files in /tmp
+set directory=/tmp
+
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+\%#\@<!$/
+
+""Remove all trailing white space with F5
+:nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
