@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/tyler/projects/paquin/magento/app/code/local/Stimpware/Configviewer'
-let g:netrw_dirhist_2='/home/tyler/projects/paquin/magento/app/code/local/Stimpware/Configviewer/etc'
-let g:netrw_dirhist_3='/etc'
-let g:netrw_dirhist_4='/home/tyler/Documents/work/healthystore/application/configs'
-let g:netrw_dirhist_5='/etc/apache2/sites-enabled'
-let g:netrw_dirhist_6='/opt/httpd/htdocs/dev-magazine.popsci.com/sites/dev-magazine.popsci.com'

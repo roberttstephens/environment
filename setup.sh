@@ -2,7 +2,7 @@
 rm -r ~/.vim/
 rm ~/.vimrc
 rm ~/.bash_aliases
-cp -r _vim ~/.vim
-cp _vimrc ~/.vimrc
-cp _bash_aliases ~/.bash_aliases
+ln -sv _vim ~/.vim
+ln -sv _vimrc ~/.vimrc
+ln -sv _bash_aliases ~/.bash_aliases
 . ~/.bashrc
