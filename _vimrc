@@ -8,8 +8,6 @@ set shiftwidth=2
 set expandtab
 set backspace=2
 
-set backupdir=~/.vim/backup
-
 "the below four are for snipmates. It loads php and html snippets for php files
 au BufRead *.php set ft=php.html
 au BufNewFile *.php set ft=php.html
