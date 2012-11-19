@@ -1,45 +1,42 @@
-"plugins: nerdtree, snipmate, xmledit, surround, taglist
-"below are added by me
-set number "displays number lines
+" plugins: nerdtree, snipmate, surround, taglist
 
-"the below three set tabstops
-set tabstop=2
+" Display line numbers on the left
+set number
+
+" When opening a new line and no filetype-specific indenting is enabled, keep
+" the same indent as the line you're currently on. Useful for READMEs, etc.
+set autoindent
+
+" Indentation settings for using 2 spaces instead of tabs.
+" Do not change 'tabstop' from its default value of 8 to see tabs clearly.
 set shiftwidth=2
-set expandtab
 set backspace=2
+set expandtab
 
-"the below four are for snipmates. It loads php and html snippets for php files
-au BufRead *.php set ft=php.html
-au BufNewFile *.php set ft=php.html
+" Switch between paste and nopaste. Paste mode prevents auto indenting.
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
 
-" For zend and drupal
-au BufRead *.phtml set ft=php.html
-au BufNewFile *.phtml set ft=php.html
+" Show that you're changing the paste mode.
+set showmode
 
-" For drupal
-au BufRead *.module set ft=php.html
-au BufNewFile *.module set ft=php.html
+" Makes all .swp files in /tmp to stay out of version control.
+set directory=/tmp
 
-au BufRead *.install set ft=php.html
-au BufNewFile *.install set ft=php.html
-" End for drupal
+" Create backups, keep them out of version control.
+set backup
+set backupdir=~/.vim/backup
 
-"autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+"------------------------------------------------------------
+" File specific settings
+"------------------------------------------------------------
+
 :filetype plugin on
 :filetype indent on
 
-"source general programming vim settings depending on file type
-au Filetype python source ~/.vim/ftplugin/programming.vim
-au Filetype php source ~/.vim/ftplugin/programming.vim
-au Filetype sh source ~/.vim/ftplugin/programming.vim
-au Filetype bash source ~/.vim/ftplugin/programming.vim
-au Filetype c source ~/.vim/ftplugin/programming.vim
+" Load php and html snippets for various suffixes, some drupal specific.
+au BufRead,BufNewFile *.php,*.phtml,*.module,*.install set ft=php.html
 
-
-"makes all .swp files in /tmp
-set directory=/tmp
-
-" show that you're changing the paste mode
-nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
-set showmode
+" Use certain settings for programming languages,
+" as opposed to system files or .txt.
+au Filetype python,php,sh,bash,c source ~/.vim/ftplugin/programming.vim
