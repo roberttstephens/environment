@@ -3,6 +3,12 @@
 " Display line numbers on the left
 set number
 
+function! FormatHtml()
+  normal ggVGJ
+  s/>\s*</>\r</g
+  normal gg=G
+endfunction
+
 " When opening a new line and no filetype-specific indenting is enabled, keep
 " the same indent as the line you're currently on. Useful for READMEs, etc.
 set autoindent
@@ -12,6 +18,7 @@ set autoindent
 set shiftwidth=2
 set backspace=2
 set expandtab
+set tabstop=2
 
 " Switch between paste and nopaste. Paste mode prevents auto indenting.
 nnoremap <F2> :set invpaste paste?<CR>
