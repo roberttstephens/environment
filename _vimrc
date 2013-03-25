@@ -46,4 +46,4 @@ au BufRead,BufNewFile *.php,*.phtml,*.module,*.install set ft=php.html
 
 " Use certain settings for programming languages,
 " as opposed to system files or .txt.
-au Filetype python,php,sh,bash,c source ~/.vim/ftplugin/programming.vim
+au Filetype go,python,php,sh,bash,c source ~/.vim/ftplugin/programming.vim
