@@ -1,24 +1,15 @@
 " plugins: nerdtree, snipmate, surround, taglist
 
+"------------------------------------------------------------
+" General settings
+"------------------------------------------------------------
+
 " Display line numbers on the left
 set number
-
-function! FormatHtml()
-  normal ggVGJ
-  s/>\s*</>\r</g
-  normal gg=G
-endfunction
 
 " When opening a new line and no filetype-specific indenting is enabled, keep
 " the same indent as the line you're currently on. Useful for READMEs, etc.
 set autoindent
-
-" Indentation settings for using 2 spaces instead of tabs.
-" Do not change 'tabstop' from its default value of 8 to see tabs clearly.
-set shiftwidth=2
-set backspace=2
-set expandtab
-set tabstop=2
 
 " Switch between paste and nopaste. Paste mode prevents auto indenting.
 nnoremap <F2> :set invpaste paste?<CR>
@@ -42,7 +33,9 @@ set backupdir=~/.vim/backup
 :filetype indent on
 
 " Load php and html snippets for various suffixes, some drupal specific.
-au BufRead,BufNewFile *.php,*.phtml,*.module,*.install set ft=php.html
+au BufRead,BufNewFile *.html,*.php,*.phtml,*.module,*.install set ft=php.html
+
+au FileType php.html source ~/.vim/ftplugin/php.html.vim
 
 " Use certain settings for programming languages,
 " as opposed to system files or .txt.
