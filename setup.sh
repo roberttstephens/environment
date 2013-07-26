@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rf ~/.vim/
+rm -rf ~/.vim
 rm ~/.vim
 rm ~/.vimrc
 rm ~/.gvimrc
