@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #
 # If the file/directory exists, and it is not a symbolic link, remove it.
