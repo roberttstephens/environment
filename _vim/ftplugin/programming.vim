@@ -2,6 +2,10 @@
 "that is opened.
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+autocmd VimEnter * TlistToggle
+let Tlist_Use_Right_Window = 1
+let Tlist_WinWidth = 35
+let tlist_php_settings = 'php;c:class;f:function'
 
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+\%#\@<!$/
@@ -15,5 +19,5 @@ endif
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " Search current directory for tags and work up the tree until one is found
-set tags=./tags;/
+set tags=./ctags;/
 syntax on
