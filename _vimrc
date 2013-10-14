@@ -33,7 +33,7 @@ set backupdir=~/.vim/backup
 :filetype indent on
 
 " Load php and html snippets for various suffixes, some drupal specific.
-au BufRead,BufNewFile *.html,*.php,*.phtml,*.module,*.install set ft=php.html
+au BufRead,BufNewFile *.html,*.php,*.phtml,*.module,*.install,*.inc set ft=php.html
 
 au FileType php.html source ~/.vim/ftplugin/php.html.vim
 
