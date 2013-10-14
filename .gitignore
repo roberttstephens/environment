@@ -1,2 +1,3 @@
 _vim/backup/*
 !_vim/backup/holder.txt
+_vim/.netrwhist
