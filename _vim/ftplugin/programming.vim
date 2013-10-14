@@ -1,7 +1,7 @@
 "automatically opens NERDTree when vim is opened. Then switches to the file
 "that is opened.
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
+"" autocmd VimEnter * NERDTree
+"" autocmd VimEnter * wincmd p
 autocmd VimEnter * TlistToggle
 let Tlist_Use_Right_Window = 1
 let Tlist_WinWidth = 35
