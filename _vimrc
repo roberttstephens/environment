@@ -39,4 +39,4 @@ au FileType php.html source ~/.vim/ftplugin/php.html.vim
 
 " Use certain settings for programming languages,
 " as opposed to system files or .txt.
-au Filetype go,python,php,sh,bash,c source ~/.vim/ftplugin/programming.vim
+au Filetype go,python,php,php.html,sh,bash,c source ~/.vim/ftplugin/programming.vim
