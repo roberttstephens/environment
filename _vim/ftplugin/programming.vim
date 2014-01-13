@@ -2,10 +2,11 @@
 "that is opened.
 "" autocmd VimEnter * NERDTree
 "" autocmd VimEnter * wincmd p
-autocmd VimEnter * TlistToggle
-let Tlist_Use_Right_Window = 1
-let Tlist_WinWidth = 35
-let tlist_php_settings = 'php;c:class;f:function'
+
+let Tlist_Compact_Format = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Close_On_Select = 1
+nnoremap <C-l> :TlistToggle<CR>
 
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+\%#\@<!$/
