@@ -202,7 +202,10 @@ snippet epydoc
 	"""
 snippet argparse
 	import argparse
-	parser = argparse.ArgumentParser(description='${1:Short description}')
-	parser.add_argument('${2:-s}', '${3:--long}',
-			   help='${4:This argument does xyx.}')
+	parser = argparse.ArgumentParser(description='${1:Description of program.}')
+	parser.add_argument('${2:-f}', '${3:--foo}',
+		help='${4:Description of foo argument.}',
+		required=${5:True},
+	)
 	args = parser.parse_args()
+	${6}
