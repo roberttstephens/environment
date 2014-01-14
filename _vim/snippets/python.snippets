@@ -200,3 +200,9 @@ snippet epydoc
 
 	@raise e: ${0: Description}
 	"""
+snippet argparse
+	import argparse
+	parser = argparse.ArgumentParser(description='${1:Short description}')
+	parser.add_argument('${2:-s}', '${3:--long}',
+			   help='${4:This argument does xyx.}')
+	args = parser.parse_args()
