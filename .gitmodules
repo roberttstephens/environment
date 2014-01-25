@@ -1,0 +1,18 @@
+[submodule "_vim/bundle/tlib_vim"]
+	path = _vim/bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "_vim/bundle/vim_addon_mw_utils"]
+	path = _vim/bundle/vim_addon_mw_utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "_vim/bundle/vim_snipmate"]
+	path = _vim/bundle/vim_snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "_vim/bundle/vim_snippets"]
+	path = _vim/bundle/vim_snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule "_vim/bundle/vim_taglist"]
+	path = _vim/bundle/vim_taglist
+	url = https://github.com/esukram/vim-taglist.git
+[submodule "_vim/bundle/vim_surround"]
+	path = _vim/bundle/vim_surround
+	url = git://github.com/tpope/vim-surround.git

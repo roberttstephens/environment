@@ -1,4 +1,7 @@
-" plugins: nerdtree, snipmate, surround, taglist
+" plugins: pathogen, snipmate, surround, taglist
+
+" Pathogen loads plugins in the ~/.vim/bundles directory.
+execute pathogen#infect()
 
 "------------------------------------------------------------
 " General settings
