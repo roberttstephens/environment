@@ -1,1 +1,0 @@
-This is a placeholder so the backup directory is created by the git checkout.
