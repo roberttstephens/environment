@@ -5,6 +5,9 @@ set backspace=2
 set expandtab
 set tabstop=2
 
+" Don't show variables for php.
+let tlist_php_settings = 'php;c:class;f:function'
+
 " Not too useful when the html is mixed with other languages (such as php).
 function! FormatHtml()
   normal ggVGJ
