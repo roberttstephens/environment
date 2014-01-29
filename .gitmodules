@@ -15,4 +15,4 @@
 	url = https://github.com/esukram/vim-taglist.git
 [submodule "_vim/bundle/vim_surround"]
 	path = _vim/bundle/vim_surround
-	url = git://github.com/tpope/vim-surround.git
+	url = http://github.com/tpope/vim-surround.git
