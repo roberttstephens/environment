@@ -1,7 +1,7 @@
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias drupalcs='phpcs --standard=/home/tstephens/projects/php/drupalcs/drupalcs/Drupal/ruleset.xml --extensions=php,module,inc,install,test,profile,theme'
+alias drupalcs='phpcs --standard=$HOME/projects/coder/coder_sniffer/Drupal/ruleset.xml --extensions=php,module,inc,install,test,profile,theme'
 
 # Ubuntu aliases
 alias 'a=sudo aptitude'
