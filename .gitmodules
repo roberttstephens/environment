@@ -10,9 +10,9 @@
 [submodule "_vim/bundle/vim_snippets"]
 	path = _vim/bundle/vim_snippets
 	url = https://github.com/honza/vim-snippets.git
-[submodule "_vim/bundle/vim_taglist"]
-	path = _vim/bundle/vim_taglist
-	url = https://github.com/esukram/vim-taglist.git
 [submodule "_vim/bundle/vim_surround"]
 	path = _vim/bundle/vim_surround
 	url = http://github.com/tpope/vim-surround.git
+[submodule "_vim/bundle/tagbar"]
+	path = _vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
