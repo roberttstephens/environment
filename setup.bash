@@ -19,7 +19,7 @@ fi
 
 
 # Iterate over files, following the logic above.
-files=(".vimrc" ".gvimrc" ".aliases")
+files=(".vimrc" ".gvimrc" ".aliases" ".gitconfig")
 for i in "${files[@]}"
 do
   if [[ -f "$HOME/$i" && ! -L "$HOME/$i" ]]; then
@@ -27,7 +27,7 @@ do
     rm "$HOME/$i"
   fi
   if [ ! -L "$HOME/$i" ]; then
-    # The git repo uses underscores instead of periods.
+    # This git repo uses underscores instead of periods.
     underscore=$(echo "$i" | sed 's/\./_/g')
     ln -sv "$PWD/$underscore" "$HOME/$i"
   fi
