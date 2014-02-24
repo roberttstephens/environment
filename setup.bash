@@ -19,7 +19,7 @@ fi
 
 
 # Iterate over files, following the logic above.
-files=(".vimrc" ".gvimrc" ".aliases" ".gitconfig")
+files=(".vimrc" ".gvimrc" ".aliases" ".gitconfig" ".gitignore")
 for i in "${files[@]}"
 do
   if [[ -f "$HOME/$i" && ! -L "$HOME/$i" ]]; then
