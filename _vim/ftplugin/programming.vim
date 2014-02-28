@@ -20,5 +20,5 @@ syntax on
 
 " Only use syntastic on the following languages.
 let g:syntastic_mode_map = { 'mode': 'passive',
-    \ 'active_filetypes': ['php'],
+    \ 'active_filetypes': ['php','go'],
     \ 'passive_filetypes': [] }
