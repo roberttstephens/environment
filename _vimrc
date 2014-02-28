@@ -41,3 +41,9 @@ au BufRead,BufNewFile *.php,*.phtml,*.module,*.install,*.inc set ft=php
 " Use certain settings for programming languages,
 " as opposed to system files or .txt.
 au Filetype javascript,go,python,php,sh,bash,c source ~/.vim/ftplugin/programming.vim
+
+" TODO for some reason this doesn't work when placed in php.vim or programming.vim.
+" Get this working in php.vim and remove it from below.
+let g:snipMate = {}
+let g:snipMate.scope_aliases = {}
+let g:snipMate.scope_aliases['php'] = 'php'

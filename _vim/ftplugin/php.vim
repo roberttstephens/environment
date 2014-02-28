@@ -14,8 +14,3 @@ function! FormatHtml()
   s/>\s*</>\r</g
   normal gg=G
 endfunction
-
-" Don't include html or javascript snippets for php files.
-let g:snipMate = {}
-let g:snipMate.scope_aliases = {}
-let g:snipMate.scope_aliases['php'] = 'php'
