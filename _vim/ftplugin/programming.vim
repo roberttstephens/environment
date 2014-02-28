@@ -19,6 +19,6 @@ endif
 syntax on
 
 " Only use syntastic on the following languages.
-let g:syntastic_mode_map = { 'mode': 'active',
+let g:syntastic_mode_map = { 'mode': 'passive',
     \ 'active_filetypes': ['php'],
     \ 'passive_filetypes': [] }
