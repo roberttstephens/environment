@@ -1,4 +1,4 @@
-" plugins: pathogen, snipmate, surround, taglist
+" plugins: pathogen, snipmate, surround, tagbar, syntastic
 
 " Pathogen loads plugins in the ~/.vim/bundles directory.
 execute pathogen#infect()
