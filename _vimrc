@@ -3,7 +3,6 @@
 "
 " Habits to enforce
 " star when cursor is on a word to go to the next occurance.
-" investigate code folding http://vim.wikia.com/wiki/Folding
 " when typing a function name, variable, etc, use ctrl+n and vim will auto complete. what??
 "
 
