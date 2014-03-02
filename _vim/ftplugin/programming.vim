@@ -17,6 +17,7 @@ endif
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 syntax on
+set hlsearch
 
 " Only use syntastic on the following languages.
 let g:syntastic_mode_map = { 'mode': 'passive',
