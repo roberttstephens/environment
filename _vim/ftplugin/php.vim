@@ -24,3 +24,12 @@ set foldcolumn=2
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 " Reminder, zi will toggle folding for the entire file.
+
+let g:tagbar_type_php  = {
+  \ 'kinds': [
+      \ 'i:interfaces',
+      \ 'c:classes',
+      \ 'd:constant definitions',
+      \ 'f:functions',
+  \ ]
+\ }
