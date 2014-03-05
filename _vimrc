@@ -1,5 +1,11 @@
 " plugins: pathogen, snipmate, surround, tagbar, syntastic
 
+"
+" Habits to enforce
+" star when cursor is on a word to go to the next occurance.
+" when typing a function name, variable, etc, use ctrl+n and vim will auto complete. what??
+"
+
 " Pathogen loads plugins in the ~/.vim/bundles directory.
 execute pathogen#infect()
 

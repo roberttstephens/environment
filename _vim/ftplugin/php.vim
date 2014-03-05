@@ -17,3 +17,19 @@ endfunction
 
 " Only use php -l (php lint) for php files.
 let g:syntastic_php_checkers=['php']
+
+set foldmethod=indent
+set foldcolumn=2
+" Use space, copied from http://vim.wikia.com/wiki/Folding
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+" Reminder, zi will toggle folding for the entire file.
+
+let g:tagbar_type_php  = {
+  \ 'kinds': [
+      \ 'i:interfaces',
+      \ 'c:classes',
+      \ 'd:constant definitions',
+      \ 'f:functions',
+  \ ]
+\ }
