@@ -3,7 +3,8 @@ set tabstop=4
 set expandtab
 
 set foldmethod=indent
-set foldcolumn=2
+set foldcolumn=0
+set foldminlines=3
 " Use space, copied from http://vim.wikia.com/wiki/Folding
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
