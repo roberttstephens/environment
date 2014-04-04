@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+# TODO deal with url params better.
+url=`echo "$1" | sed 's/www.youtube.com/youtube.googleapis.com/g' | sed 's/watch?//g' | sed 's/v=/v\//g'`
+chromium --app=$url

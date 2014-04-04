@@ -1,0 +1,16 @@
+#!/bin/bash
+# TODO if db_and_user is longer than 16, show error that the mysql user has a max
+# length of 16 characters.
+echoerr() {
+	echo "$@" 1>&2;
+}
+
+db_and_user="$1"
+if [[ -z "${db_and_user}" ]]; then
+	echoerr "Usage $0 name_of_user_and_db"
+	exit
+fi
+echo "create database if not exists $db_and_user;
+grant all privileges on $db_and_user.* to '$db_and_user'@'%' IDENTIFIED BY '$db_and_user';
+grant all privileges on $db_and_user.* to '$db_and_user'@'localhost' IDENTIFIED BY '$db_and_user';
+flush privileges;"
