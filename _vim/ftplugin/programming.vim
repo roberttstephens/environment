@@ -5,6 +5,8 @@
 
 nnoremap <C-l> :TagbarToggle<CR>
 
+set tags=tags;/
+
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+\%#\@<!$/
 if exists('+colorcolumn')
