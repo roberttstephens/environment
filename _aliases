@@ -1,7 +1,9 @@
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias drupalcs='phpcs --standard=$HOME/projects/coder/coder_sniffer/Drupal/ruleset.xml --extensions=php,module,inc,install,test,profile,theme'
+
+# For svn, grepping out external junk.
+alias mysvnst="svn st | grep -vE '^(P|X|$)'"
 
 # Ubuntu aliases
 alias 'a=sudo aptitude'
@@ -14,6 +16,7 @@ alias 'aw=apt-cache show'
 
 # Used for drupal
 alias drgrep='find . -not -iwholename "*.svn" -type f \( -name "*.php" -o -name "*.module" -o -name "*.inc" \) -print0 | xargs -0 -n1 -P4 grep --color=auto -nH'
+alias drupalcs='phpcs --standard=$HOME/projects/coder/coder_sniffer/Drupal/ruleset.xml --extensions=php,module,inc,install,test,profile,theme'
 
 # Used for git
 alias ga='git add'
