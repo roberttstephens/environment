@@ -5,6 +5,10 @@ alias l='ls -CF'
 # For svn, grepping out external junk.
 alias mysvnst="svn st | grep -vE '^(P|X|$)'"
 
+# I never remember how to format dates.
+# Use like mysqldump > ~/backups/database_$(isodate).sql
+alias isodate="date +%Y-%m-%d"
+
 # Ubuntu aliases
 alias 'a=sudo aptitude'
 alias 'ai=sudo aptitude install'
