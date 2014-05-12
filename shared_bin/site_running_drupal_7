@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+import argparse
+import urllib.request
+
+def is_site_drupal_7(url):
+    response = urllib.request.urlopen(url)
+    if 'Drupal 7' in response.getheader('X-Generator'):
+        return True
+    return False
+
+def main(url):
+    if is_site_drupal_7(url):
+        print('yes')
+    else:
+        print('no')
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(
+            description='Determine if a site is running drupal 7.')
+    parser.add_argument('url', help='The url to check')
+    args = parser.parse_args()
+    main(args.url)
