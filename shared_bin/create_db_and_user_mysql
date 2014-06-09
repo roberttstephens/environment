@@ -1,16 +1,53 @@
 #!/usr/bin/env bash
-# TODO if db_and_user is longer than 16, show error that the mysql user has a max
-# length of 16 characters.
-echoerr() {
-	echo "$@" 1>&2;
+show_help() {
+	echo "Usage: create_db_and_user_mysql [-h] -n > mysql -u root -ppass"
+	echo ""
+	echo "A helper script for dev environments that creates a database,"
+	echo "user, and password with the same name."
+	echo ""
+	echo "Obviously do not use for anything besides developemnt."
+	echo ""
+	echo "required arguments:"
+	echo "  -n     the name of database/user/pass. Maximum length = 16"
+	echo ""
+	echo "optional arguments:"
+	echo "  -h     show this help message and exit"
 }
 
-db_and_user="$1"
-if [[ -z "${db_and_user}" ]]; then
-	echoerr "Usage $0 name_of_user_and_db"
-	exit
+# Reset in case getopts has been used previously in the shell.
+OPTIND=1
+
+# Initialize our own variables:
+name=""
+
+while getopts "h?n:" opt; do
+	case "$opt" in
+	h|\?)
+		show_help
+		exit 0
+		;;
+	n)  name=$OPTARG
+		;;
+	esac
+done
+
+shift $((OPTIND-1))
+
+[ "$1" = "--" ] && shift
+
+if [[ -z $name ]]; then
+	show_help
+	exit 1
 fi
-echo "create database if not exists $db_and_user;
-grant all privileges on $db_and_user.* to '$db_and_user'@'%' IDENTIFIED BY '$db_and_user';
-grant all privileges on $db_and_user.* to '$db_and_user'@'localhost' IDENTIFIED BY '$db_and_user';
+
+# Ensure that name is not greater than 16 characters.
+if [[ ${#name} -gt 16 ]]; then
+	echo "$name is ${#name} characters, but should be no longer" 1>&2
+	echo "than 16 characters." 1>&2
+	exit 1
+fi
+
+echo "create database if not exists $name;
+grant all privileges on $name.* to '$name'@'%' IDENTIFIED BY '$name';
+grant all privileges on $name.* to '$name'@'localhost' IDENTIFIED BY '$name';
 flush privileges;"
