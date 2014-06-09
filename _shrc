@@ -1,0 +1,4 @@
+# set PATH so it includes shared_bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/shared_bin:$PATH"
+fi

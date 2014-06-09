@@ -42,10 +42,6 @@ do
       # The file does not already source our alias file.
       echo "if [ -f ~/.aliases ]; then source ~/.aliases; fi" >> $rc_file
     fi
-    if ! grep -q 'PATH=$PATH:$HOME/shared_bin' $rc_file; then
-      # The file does not already add ~/shared_bin to $PATH
-      echo 'PATH=$PATH:$HOME/shared_bin' >> $rc_file
-    fi
   fi
 done
 
