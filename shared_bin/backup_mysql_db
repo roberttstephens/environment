@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+# isodate is defined in ~/.aliases
+shopt -s expand_aliases
+source $HOME/.aliases
+
+show_help() {
+	echo "Usage: backup_mysql_db [-h] -n"
+	echo ""
+	echo "Backup a mysqldatabase, gzip it, and put it in ~/backups."
+	echo "This is used in conjunction with create_db_and_user, so"
+	echo "the database, user, and password are expected to be the same."
+	echo ""
+	echo "required arguments:"
+	echo "  -n     the name of database/user/pass."
+	echo ""
+	echo "optional arguments:"
+	echo "  -h     show this help message and exit"
+}
+
+# Reset in case getopts has been used previously in the shell.
+OPTIND=1
+
+# Initialize our own variables:
+name=""
+
+while getopts "h?n:" opt; do
+	case "$opt" in
+	h|\?)
+		show_help
+		exit 0
+		;;
+	n)  name=$OPTARG
+		;;
+	esac
+done
+
+shift $((OPTIND-1))
+
+[ "$1" = "--" ] && shift
+
+if [[ -z $name ]]; then
+	show_help
+	exit 1
+fi
+
+filename="${name}_$(isodate).sql.gz"
+
+if [[ ! -d "$HOME/backups" ]]; then
+	mkdir "$HOME/backups"
+fi
+
+if [[ -f "$HOME/backups/$filename" ]]; then
+	num=1
+	while [[ -f "$HOME/backups/${name}_$(isodate)_${num}.sql.gz" ]]; do
+		let num++
+	done
+	filename="${name}_$(isodate)_${num}.sql.gz"
+fi
+
+echo "Creating file $HOME/backups/${filename}"
+
+mysqldump -u $name -p$name $name | gzip -c - > $HOME/backups/$filename
