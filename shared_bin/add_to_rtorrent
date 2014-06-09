@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 watch_folder=~/watch
 cd $watch_folder
 [[ "$1" =~ xt=urn:btih:([^&/]+) ]] || exit;
