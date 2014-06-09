@@ -2,3 +2,8 @@
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/shared_bin:$PATH"
 fi
+
+# Source the shared aliases file.
+if [ -f ~/.aliases ]; then
+    source ~/.aliases;
+fi
