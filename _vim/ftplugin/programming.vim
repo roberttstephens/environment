@@ -23,5 +23,5 @@ set hlsearch
 
 " Only use syntastic on the following languages.
 let g:syntastic_mode_map = { 'mode': 'passive',
-    \ 'active_filetypes': ['php','go','javascript'],
+    \ 'active_filetypes': ['php','go','javascript','python'],
     \ 'passive_filetypes': [] }
