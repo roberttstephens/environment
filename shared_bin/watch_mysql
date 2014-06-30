@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+watch -n .5 'echo "show processlist;" | mysql -u root -pmysql'
