@@ -25,3 +25,5 @@ set hlsearch
 let g:syntastic_mode_map = { 'mode': 'passive',
     \ 'active_filetypes': ['php','go','javascript'],
     \ 'passive_filetypes': [] }
+
+colorscheme xoria256
