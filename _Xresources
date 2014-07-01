@@ -1,6 +1,9 @@
 ! Found on arch wiki
 
-URxvt.perl-ext-common: ...,tabbed,...
+! Add the tabs and url matcher plugins.
+URxvt.perl-ext-common: ...,tabbed,default,matcher,...
+
+! Tabs
 URxvt.tabbed.tabbar-fg: 2
 URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg: 3
@@ -9,6 +12,14 @@ URxvt*background: Black
 URxvt*foreground: White
 URxvt*geometry: 80x30
 URxvt*scrollBar: false
+
+
+! Get clickable URLs
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+! Make the URLs blue
+URxvt.colorUL: #4682B4
 
 
 ! Found on gentoo wiki
@@ -42,11 +53,3 @@ URxvt*scrollBar: false
 *color15: #efefef
 
 URxvt*font:           xft:Inconsolata:size=10
-
-! Get clickable URLs
-URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/xdg-open
-URxvt.matcher.button: 1
-
-! Make the URLs blue
-URxvt.colorUL: #4682B4
