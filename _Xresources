@@ -42,3 +42,11 @@ URxvt*scrollBar: false
 *color15: #efefef
 
 URxvt*font:           xft:Inconsolata:size=10
+
+! Get clickable URLs
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+! Make the URLs blue
+URxvt.colorUL: #4682B4
