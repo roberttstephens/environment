@@ -7,8 +7,6 @@ nnoremap <C-l> :TagbarToggle<CR>
 
 set tags=tags;/
 
-:highlight ExtraWhitespace ctermbg=red guibg=red
-:match ExtraWhitespace /\s\+\%#\@<!$/
 if exists('+colorcolumn')
   set colorcolumn=80
 else
@@ -27,3 +25,6 @@ let g:syntastic_mode_map = { 'mode': 'passive',
     \ 'passive_filetypes': [] }
 
 colorscheme xoria256
+
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+\%#\@<!$/
