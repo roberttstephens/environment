@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 show_help() {
-	echo "Usage: create_db_and_user_mysql [-h] -n > mysql -u root -ppass"
+	echo "Usage: create_db_and_user_mysql [-h] -n | mysql -u root -ppass"
 	echo ""
 	echo "A helper script for dev environments that creates a database,"
 	echo "user, and password with the same name."
