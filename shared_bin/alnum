@@ -1,2 +1,1 @@
-#!/usr/bin/env bash
-tr -cd '[[:alnum:]]._-'
+sed 's/[^[:alpha:]]//g'
