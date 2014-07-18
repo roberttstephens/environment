@@ -1,7 +1,7 @@
 ! Found on arch wiki
 
 ! Add the tabs and url matcher plugins.
-URxvt.perl-ext-common: ...,tabbed,default,matcher,...
+URxvt.perl-ext-common: tabbed,default,matcher,selection-to-clipboard
 
 ! Tabs
 URxvt.tabbed.tabbar-fg: 2
