@@ -52,4 +52,4 @@ URxvt.colorUL: #4682B4
 *color7:  #efefef
 *color15: #efefef
 
-URxvt*font:           xft:Inconsolata:size=10
+URxvt*font:           xft:Inconsolata:size=12
