@@ -9,6 +9,11 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# Include bin
+if [ -d "$HOME/.composer/vendor/bin" ] ; then
+    PATH="$HOME/.composer/vendor/bin:$PATH"
+fi
+
 # Source the shared aliases file.
 if [ -f ~/.aliases ]; then
     source ~/.aliases;
