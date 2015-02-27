@@ -1,9 +1,9 @@
 " Indentation settings for using 2 spaces instead of tabs.
 " Do not change 'tabstop' from its default value of 8 to see tabs clearly.
-set shiftwidth=2
-set backspace=2
+set shiftwidth=4
+set tabstop=4
 set expandtab
-set tabstop=2
+set softtabstop=4
 
 " Don't show variables for php.
 let tlist_php_settings = 'php;c:class;f:function'
@@ -16,7 +16,7 @@ function! FormatHtml()
 endfunction
 
 " Only use php -l (php lint) for php files.
-let g:syntastic_php_checkers=['php']
+"let g:syntastic_php_checkers=['php']
 
 set foldmethod=indent
 set foldcolumn=0
@@ -34,3 +34,18 @@ let g:tagbar_type_php  = {
       \ 'f:functions',
   \ ]
 \ }
+
+let g:syntastic_php_phpcs_args="--standard=Symfony2"
+if has('statusline')
+  set laststatus=2
+  " Broken down into easily includeable segments
+  set statusline=%<%f\ " Filename
+  set statusline+=%w%h%m%r " Options
+  set statusline+=\ [%{&ff}/%Y] " filetype
+  set statusline+=\ [%{getcwd()}] " current dir
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+  let g:syntastic_enable_signs=1
+  set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info
+endif
