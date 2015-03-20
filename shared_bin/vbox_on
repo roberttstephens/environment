@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+rmmod kvm_intel
+rmmod kvm
+systemctl start dkms.service
+modprobe vboxdrv
