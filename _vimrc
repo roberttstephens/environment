@@ -35,6 +35,14 @@ set backup
 set backupdir=~/.vim/backup
 
 "------------------------------------------------------------
+" Neovim related settings
+"------------------------------------------------------------
+
+" Make backspace work the same as vim.
+" See https://www.reddit.com/r/neovim/comments/2z538d/backspace_only_works_if_my_nvimrc_is_completely/
+set backspace=indent,eol,start
+
+"------------------------------------------------------------
 " File specific settings
 "------------------------------------------------------------
 
