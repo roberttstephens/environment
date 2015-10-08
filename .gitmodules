@@ -19,3 +19,6 @@
 [submodule "_vim/bundle/syntastic"]
 	path = _vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "_vim/bundle/splitjoin"]
+	path = _vim/bundle/splitjoin
+	url = https://github.com/AndrewRadev/splitjoin.vim.git
