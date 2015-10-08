@@ -28,3 +28,6 @@ colorscheme xoria256
 
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+\%#\@<!$/
+
+" Should wrap comments at 80 chars, depending on formatoptions.
+setlocal textwidth=80
