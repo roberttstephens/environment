@@ -42,6 +42,9 @@ set backupdir=~/.vim/backup
 " See https://www.reddit.com/r/neovim/comments/2z538d/backspace_only_works_if_my_nvimrc_is_completely/
 set backspace=indent,eol,start
 
+" Disable the stupid mouse.
+set mouse=
+
 "------------------------------------------------------------
 " File specific settings
 "------------------------------------------------------------
