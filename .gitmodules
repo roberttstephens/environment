@@ -22,3 +22,6 @@
 [submodule "_vim/bundle/splitjoin"]
 	path = _vim/bundle/splitjoin
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
+[submodule "_vim/bundle/vim-go"]
+	path = _vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
