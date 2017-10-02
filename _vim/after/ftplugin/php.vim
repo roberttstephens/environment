@@ -16,7 +16,7 @@ function! FormatHtml()
 endfunction
 
 " Only use php -l (php lint) for php files.
-let g:syntastic_php_checkers=['php']
+let g:syntastic_php_checkers=['php','phpcs']
 
 set foldmethod=indent
 set foldcolumn=0

@@ -21,9 +21,6 @@ alias 'aw=apt-cache show'
 
 # Used for drupal
 alias drgrep='find . -not -iwholename "*.svn" -type f \( -name "*.php" -o -name "*.module" -o -name "*.inc" -o -name "*.install" \) -print0 | xargs -0 -n1 -P4 grep --color=auto -nH'
-alias drupalcs='phpcs --standard=$HOME/.composer/vendor/drupal/coder/coder_sniffer/Drupal/ruleset.xml --extensions=php,module,inc,install,test,profile,theme'
-
-alias psrcs='phpcs --standard=$HOME/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/PSR2/ruleset.xml'
 
 # Used for git
 alias ga='git add'
