@@ -1,4 +1,4 @@
-" plugins: pathogen, snipmate, surround, tagbar, syntastic
+" plugins: pathogen, snipmate, surround, tagbar, ale
 
 "
 " Habits to enforce
@@ -68,3 +68,7 @@ let g:snipMate.scope_aliases['php'] = 'php'
 if has("nvim")
     set inccommand=nosplit
 endif
+
+" Only lint when saving files.
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0

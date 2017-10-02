@@ -16,12 +16,12 @@
 [submodule "_vim/bundle/tagbar"]
 	path = _vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule "_vim/bundle/syntastic"]
-	path = _vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
 [submodule "_vim/bundle/splitjoin"]
 	path = _vim/bundle/splitjoin
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
 [submodule "_vim/bundle/vim-go"]
 	path = _vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "_vim/bundle/ale"]
+	path = _vim/bundle/ale
+	url = https://github.com/w0rp/ale.git
