@@ -64,3 +64,7 @@ au Filetype javascript,go,python,php,sh,bash,c,perl source ~/.vim/ftplugin/progr
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['php'] = 'php'
+
+if has("nvim")
+    set inccommand=nosplit
+endif
