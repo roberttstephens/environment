@@ -1,4 +1,4 @@
-" plugins: pathogen, snipmate, surround, tagbar, syntastic
+" plugins: pathogen, snipmate, surround, tagbar, ale
 
 "
 " Habits to enforce
@@ -64,3 +64,33 @@ au Filetype javascript,go,python,php,sh,bash,c,perl source ~/.vim/ftplugin/progr
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['php'] = 'php'
+
+if has("nvim")
+    set inccommand=nosplit
+endif
+
+" Only lint when saving files.
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+
+if has("nvim")
+  " Make escape work in the Neovim terminal.
+  tnoremap <Esc> <C-\><C-n>
+
+  "To use `ALT+{h,j,k,l}` to navigate windows from any mode:
+  :tnoremap <A-h> <C-\><C-N><C-w>h
+  :tnoremap <A-j> <C-\><C-N><C-w>j
+  :tnoremap <A-k> <C-\><C-N><C-w>k
+  :tnoremap <A-l> <C-\><C-N><C-w>l
+  :inoremap <A-h> <C-\><C-N><C-w>h
+  :inoremap <A-j> <C-\><C-N><C-w>j
+  :inoremap <A-k> <C-\><C-N><C-w>k
+  :inoremap <A-l> <C-\><C-N><C-w>l
+  :nnoremap <A-h> <C-w>h
+  :nnoremap <A-j> <C-w>j
+  :nnoremap <A-k> <C-w>k
+  :nnoremap <A-l> <C-w>l
+
+  " Prefer Neovim terminal insert mode to normal mode.
+  autocmd BufEnter term://* startinsert
+endif
