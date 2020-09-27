@@ -37,3 +37,5 @@ alias gpod='git push origin dev'
 # TODO transliterate instead of reducing to ASCII. Maybe fork youtube-dl?
 
 alias youtube-dl-mp3='youtube-dl -x --audio-format mp3 --restrict-filenames -o "%(title)s.%(ext)s"'
+alias p='cd /home/tyler/projects/'
+alias cr='lando drush cr'

@@ -10,6 +10,11 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # Include bin
+if [ -d "$HOME/go/bin" ] ; then
+    PATH="$HOME/go/bin:$PATH"
+fi
+
+# Include bin
 if [ -d "$HOME/.composer/vendor/bin" ] ; then
     PATH="$HOME/.composer/vendor/bin:$PATH"
 fi
