@@ -1,5 +1,9 @@
 " plugins: pathogen, snipmate, surround, tagbar, ale
 
+let g:ale_completion_enabled = 1
+let g:ale_completion_autoimport = 1
+set omnifunc=ale#completion#OmniFunc
+
 "
 " Habits to enforce
 " star when cursor is on a word to go to the next occurance.
@@ -57,7 +61,7 @@ au BufRead,BufNewFile *.php,*.phtml,*.module,*.install,*.inc set ft=php
 
 " Use certain settings for programming languages,
 " as opposed to system files or .txt.
-au Filetype javascript,go,python,php,sh,bash,c,perl source ~/.vim/ftplugin/programming.vim
+au Filetype typescript,javascript,go,python,php,sh,bash,c,perl source ~/.vim/ftplugin/programming.vim
 
 " TODO for some reason this doesn't work when placed in php.vim or programming.vim.
 " Get this working in php.vim and remove it from below.

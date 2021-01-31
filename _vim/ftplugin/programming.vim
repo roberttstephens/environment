@@ -19,7 +19,11 @@ endif
 syntax on
 set hlsearch
 
-colorscheme xoria256
+if has('nvim')
+    " Neovim specific commands
+else
+  colorscheme xoria256
+endif
 
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+\%#\@<!$/
