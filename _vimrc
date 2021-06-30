@@ -58,6 +58,7 @@ set mouse=
 
 " Load php and html snippets for various suffixes, some drupal specific.
 au BufRead,BufNewFile *.php,*.phtml,*.module,*.install,*.inc set ft=php
+au BufRead,BufNewFile *.tsx set ft=typescript
 
 " Use certain settings for programming languages,
 " as opposed to system files or .txt.

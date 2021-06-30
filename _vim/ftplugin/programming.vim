@@ -29,4 +29,4 @@ endif
 :match ExtraWhitespace /\s\+\%#\@<!$/
 
 " Should wrap comments at 80 chars, depending on formatoptions.
-setlocal textwidth=80
+" setlocal textwidth=80
