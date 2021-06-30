@@ -39,3 +39,5 @@ alias gpod='git push origin dev'
 alias youtube-dl-mp3='youtube-dl -x --audio-format mp3 --restrict-filenames -o "%(title)s.%(ext)s"'
 alias p='cd /home/tyler/projects/'
 alias cr='lando drush cr'
+
+alias grep='grep --color=auto -I --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.next,node_modules,out-storybook,img}'
