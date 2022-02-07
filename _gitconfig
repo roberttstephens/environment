@@ -4,3 +4,4 @@
 	ui = auto
 [core]
 	quotepath = false
+	editor = vim
