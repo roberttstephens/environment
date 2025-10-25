@@ -5,3 +5,8 @@
 [core]
 	quotepath = false
 	editor = vim
+[user]
+	email = roberttstephens@gmail.com
+	name = Tyler Stephens
+[log]
+	date = local

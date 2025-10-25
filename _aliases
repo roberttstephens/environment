@@ -26,12 +26,12 @@ alias drupalcs='phpcs --standard=$HOME/.composer/vendor/drupal/coder/coder_sniff
 alias psrcs='phpcs --standard=$HOME/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/PSR2/ruleset.xml'
 
 # Used for git
-alias ga='git add'
-alias gc='git commit'
-alias gca='git commit -a'
-alias gcam='git commit -a -m'
-alias gpom='git push origin master'
-alias gpod='git push origin dev'
+# alias ga='git add'
+# alias gc='git commit'
+# alias gca='git commit -a'
+# alias gcam='git commit -a -m'
+# alias gpom='git push origin master'
+# alias gpod='git push origin dev'
 
 # Download mp3 files from youtube-dl.
 # TODO transliterate instead of reducing to ASCII. Maybe fork youtube-dl?
@@ -40,4 +40,5 @@ alias youtube-dl-mp3='youtube-dl -x --audio-format mp3 --restrict-filenames -o "
 alias p='cd /home/tyler/projects/'
 alias cr='lando drush cr'
 
-alias grep='grep --color=auto -I --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.next,node_modules,out-storybook,img}'
+alias grep='grep --color=auto -I --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.next,node_modules,out-storybook,img,.terraform}'
+alias vim='nvim'

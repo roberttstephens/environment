@@ -3,7 +3,6 @@ if [ -d "$HOME/shared_bin" ] ; then
     PATH="$HOME/shared_bin:$PATH"
 fi
 
-
 # Include bin
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
@@ -17,6 +16,21 @@ fi
 # Include bin
 if [ -d "$HOME/.composer/vendor/bin" ] ; then
     PATH="$HOME/.composer/vendor/bin:$PATH"
+fi
+
+
+if [ -d "$HOME/.cargo/bin" ] ; then
+    PATH="$HOME/.cargo/bin:$PATH"
+fi
+
+
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+
+if [ -d "$HOME/terminus" ] ; then
+    PATH="$HOME/terminus:$PATH"
 fi
 
 # Source the shared aliases file.
