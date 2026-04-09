@@ -33,6 +33,14 @@ if [ -d "$HOME/terminus" ] ; then
     PATH="$HOME/terminus:$PATH"
 fi
 
+if [ -d "$HOME/neovim/bin" ] ; then
+    PATH="$HOME/neovim/bin:$PATH"
+fi
+
+if [ -d "$HOME/.tfenv/bin" ] ; then
+    PATH="$HOME/.tfenv/bin:$PATH"
+fi
+
 # Source the shared aliases file.
 if [ -f ~/.aliases ]; then
     source ~/.aliases;
