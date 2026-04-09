@@ -38,7 +38,14 @@ alias psrcs='phpcs --standard=$HOME/.composer/vendor/squizlabs/php_codesniffer/C
 
 alias youtube-dl-mp3='youtube-dl -x --audio-format mp3 --restrict-filenames -o "%(title)s.%(ext)s"'
 alias p='cd /home/tyler/projects/'
+alias pll='cd /home/tyler/projects/virtual-assistant/packages/lex_lambda/'
+alias papi='cd /home/tyler/projects/virtual-assistant/packages/api/'
+alias pp='cd /home/tyler/projects/virtual-assistant/packages/'
 alias cr='lando drush cr'
 
 alias grep='grep --color=auto -I --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.next,node_modules,out-storybook,img,.terraform}'
 alias vim='nvim'
+alias vinit='nvim /home/tyler/.config/nvim/init.lua'
+
+alias vel='nvim /home/tyler/Documents/el/$(isodate).txt'
+alias vva='nvim /home/tyler/Documents/va/$(isodate).txt'
