@@ -9,6 +9,11 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # Include bin
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Include bin
 if [ -d "$HOME/go/bin" ] ; then
     PATH="$HOME/go/bin:$PATH"
 fi
